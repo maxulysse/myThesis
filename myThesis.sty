@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Maxime Ulysse Garcia, max@ithake.eu, 2013 %%%
+%%%                                           %%%
+%%%    Questions and suggestions WELCOMED!    %%%
+%%%                                           %%%
+%%% This thesis template largely derives from %%%
+%%%      Charles Chapple, Robert Castelo      %%%
+%%%    Sergio Mendoza and Sergi Castellano    %%%
+%%%       Under GNU/GPL copyleft license      %%%
+%%%                                           %%%
+%%%   FEEL FREE TO USE IT AND IMPROVE IT!!!   %%%
+%%%                                           %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                  Language                 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage[french]{babel}
+\RequirePackage{blindtext}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+\RequirePackage{fix-cm}
+\frenchspacing
+% To get the names right in french for TOC/TOT/TOF
+\addto{\captionsfrench}{
+	\renewcommand\contentsname{Table des Matières}
+	\renewcommand\tablename{Tableau}
+	\renewcommand\listtablename{Index des Tableaux}
+	\renewcommand\figurename{Figure}
+	\renewcommand\listfigurename{Index des Figures}
+	\renewcommand\bibname{Références}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%               Fancy headings              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Make fancy headings different colors for each chapter
+\newcommand{\mychapter}[2]{\textcolor{#1}{\chapter{#2}}}
+
+\newcommand{\mynochapter}[2]{\textcolor{#1}{\chapter*{#2}}}
+
+% fancy chapters
+\RequirePackage[Rejne]{fncychap}
+%Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, PetersLenny, Bjornstrup
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                 Numbering                 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Chapter numbering in Roman
+\renewcommand\thechapter{\Roman{chapter}}
+
+% Section in arabic
+\renewcommand\thesection{\thechapter.\arabic{section}}
+
+% Subsection in alphanumeric lowercase
+\renewcommand\thesubsection{\thesection.\alph{subsection}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                   Tables                  %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Better tables
+\RequirePackage{booktabs}
+% To allow multirow
+\RequirePackage{multirow}
+% Let you make a second caption with \caption*
+\RequirePackage{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                    TOC                    %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{tocbibind}
+\RequirePackage{appendix}
+
+% To get minitoc in french
+\RequirePackage[undotted,french]{minitoc}
+
+%%% Additional definitions for this thesis %%%
+
+\font\avantgar            = pagk8r
+\font\avantgarlarge       = pagk8r at 12pt
+\font\avantgarLarge       = pagd8r at 14pt
+\font\avantgarboldHuge    = pagd8r at 25pt
+
+% Better spacing
+\usepackage{microtype}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                   Boxes                  %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Red box
+\newcommand\sectionred{\@startsection{section}{1}
+	{0pt}{-\baselineskip}{\baselineskip}
+	{\color{red!45!black}\raggedright\textcolor{red!45!black}{\rule{3mm}{0.75cm}}\textcolor{red!5!white}{\rule{3mm}{0.75cm}}
+	\medskip\fontsize{18}{16}\sffamily}}
+
+% Green box
+\newcommand\sectiongreen{\@startsection{section}{1}
+	{0pt}{-\baselineskip}{\baselineskip}
+	{\color{green!45!black}\raggedright\textcolor{green!45!black}{\rule{3mm}{0.75cm}}\textcolor{green!5!white}{\rule{3mm}{0.75cm}}
+	\medskip\fontsize{18}{16}\sffamily}}
+
+% Blue box
+\newcommand\sectionblue{\@startsection{section}{1}
+	{0pt}{-\baselineskip}{\baselineskip}
+	{\color{blue!45!black}\raggedright\textcolor{blue!45!black}{\rule{3mm}{0.75cm}}\textcolor{blue!5!white}{\rule{3mm}{0.75cm}}
+	\medskip\fontsize{18}{16}\sffamily}}
+
+% Grey box
+\newcommand\sectiongrey{\@startsection{section}{1}
+	{0pt}{-\baselineskip}{\baselineskip}
+	{\color{white!15!black}\raggedright\textcolor{white!15!black}{\rule{3mm}{0.75cm}}\textcolor{black!5!white}{\rule{3mm}{0.75cm}}
+	\medskip\fontsize{18}{16}\sffamily}}

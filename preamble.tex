@@ -1,0 +1,293 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Maxime Ulysse Garcia, max@ithake.eu, 2013 %%%
+%%%                                           %%%
+%%%    Questions and suggestions WELCOMED!    %%%
+%%%                                           %%%
+%%% This thesis template largely derives from %%%
+%%%      Charles Chapple, Robert Castelo      %%%
+%%%    Sergio Mendoza and Sergi Castellano    %%%
+%%%       Under GNU/GPL copyleft license      %%%
+%%%                                           %%%
+%%%   FEEL FREE TO USE IT AND IMPROVE IT!!!   %%%
+%%%                                           %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Preamble: LaTeX parameters and extensions %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%               Document type               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% While working to see output errors
+%\documentclass[draft,pdftex,oneside]{book}
+
+% To produce final printable version
+\documentclass[pdftex,oneside]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%              Tweaking errors              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% To remove "No room for a new \dimen" when using tikz
+\RequirePackage{etex}
+% For fancyhdr
+\setlength{\headheight}{13pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             Our own style file            %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Style file for this template myThesis.sty
+\RequirePackage{myThesis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                   Colors                  %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage[usenames,
+	dvipsnames,
+	svgnames,
+	table]{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                Paper layout               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\RequirePackage[paperwidth=170mm,
+	paperheight=240mm,
+	hmargin={2cm,1cm},
+	vmargin={2cm,1.75cm},
+	headheight=14pt]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                  Headings                 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%For memoir class
+\let\footruleskip\undefined
+
+% To produce nice headings
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+
+% Big first letter.
+\RequirePackage{lettrine}
+\newcommand{\mylettrine}[1]{\lettrine[lines=3,lhang=.1]{#1}}
+
+% Fancy looking boxes
+\RequirePackage{tcolorbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%            Marks and draftmarks           %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\myversion}{V 0.7}
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter. #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+\lfoot{}
+\rfoot{}
+
+% Normal marks
+\lhead[\fancyplain{}{\sffamily\thepage}]{\fancyplain{}{\sffamily\rightmark}}
+\rhead[\fancyplain{}{\sffamily\leftmark}]{\fancyplain{}{\sffamily\thepage}}
+\cfoot{}
+
+%Draftmarks
+%\lhead[\fancyplain{}{\sffamily\thepage}]{\fancyplain{}{\sffamily\textcolor{blue}{DRAFT} \rightmark}}
+%\rhead[\fancyplain{}{\sffamily\leftmark}]{\fancyplain{}{\sffamily\thepage}}
+%\cfoot{\textcolor{blue}{\myversion}}
+
+%%% Line Spacing %%%
+\RequirePackage{setspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                PDF commands               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% To produce final version
+\RequirePackage{pdfpages}
+
+% Used in each \%includepdf call unless overwritten locally
+\includepdfset{frame=false,pagecommand={\thispagestyle{fancy}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                  Figures                  %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Path to figures
+\graphicspath{{figures//}}
+% To include graphics
+\RequirePackage{graphicx}
+% To wrap text
+\RequirePackage{wrapfig}
+% to draw Figures
+\RequirePackage{tikz}
+% to rotate figures and tables
+\RequirePackage{rotating}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                 Equations                 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{mathtools}
+
+% Redefine the square root:
+\let\oldsqrt\sqrt
+\def\sqrt{\mathpalette\DHLhksqrt}
+\def\DHLhksqrt#1#2{
+	\setbox0=\hbox{$#1\oldsqrt{#2\,}$}\dimen0=\ht0
+	\advance\dimen0-0.2\ht0
+	\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}
+	{\box0\lower0.4pt\box2}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                Big numbers                %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{numprint}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                   Lists                   %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Provides a new environnement to do a list
+\newenvironment{mylist}[1]{
+	\begin{list}{}{
+		\settowidth{\labelwidth}{#1:}
+		\setlength{\labelsep}{0.5cm}
+		\setlength{\leftmargin}{\labelwidth}
+		\addtolength{\leftmargin}{\labelsep}
+		\setlength{\rightmargin}{0pt}
+		\setlength{\parsep}{0.5ex plus 0.2ex minus 0.1ex}
+		\setlength{\itemsep}{0 ex plus 0.2ex}
+		\renewcommand{\makelabel}[1]{\textbf{##1}\hfil}
+		}
+	}
+{\end{list}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                  Acronyms                 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{suffix}
+\RequirePackage[printonlyused]{acronym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                  Verbatim                 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{moreverb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                 References                %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage[round,comma,numbers,super,sort&compress]{natbib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                   Index                   %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{makeidx}
+\makeindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                   Fonts                   %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{palatino}
+\RequirePackage{amsfonts}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%               URL inclusion               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage[pdftex,
+	colorlinks=true,
+	linkcolor=black,
+	menucolor=red,
+	pdfhighlight=/P,
+	citecolor=MidnightBlue,
+	urlcolor=BrickRed,
+	linktocpage=false]{hyperref}
+%Enter URLs like this: \url{http://ithake.eu/}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%               Defining terms              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\myauthor{Firstname Lastname}
+
+\def\mytitlefr{Titre en français}
+
+\def\mytitleen{English title}
+
+\def\myabstractfr{\blindtext}
+
+\def\myabstracten{\blindtext}
+
+\def\mykeywordsfr{mots-clés; français}
+
+\def\mykeywordsen{English; Keywords}
+
+% To get subscript easily
+\newcommand{\textunderscript}[1]{$_{\text{#1}}$}
+
+% To get e and er in superscript easily
+\newcommand{\eme}{\textsuperscript{e} }
+\newcommand{\er}{\textsuperscript{er} }
+
+% To get CO2 and O2 easily
+\newcommand{\COO}{CO\textunderscript{2} }
+\newcommand{\OO}{O\textunderscript{2} }
+
+% shorther command for boldface
+\newcommand{\bb}[1]{\textbf{#1}}
+
+%%% to add an empty page, output pending figures and resume in an odd-numbered one %%%
+
+\newcommand{\clearemptypage}{\newpage\thispagestyle{empty}\mbox{}}
+
+\newcommand{\clearemptydoublepage}{
+	\clearemptypage
+	\if@twoside
+		\ifodd
+			\clearemptypage
+		\fi
+	\fi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                 PDF infos                 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypersetup{
+	pdftitle		= {\mytitlefr},
+	pdfsubject		= {subject},
+	pdfkeywords		= {\mykeywordsfr},
+	pdfauthor		= {\myauthor},
+	pdfcreator		= {\LaTeX},
+	pdfproducer		= {pdfeTeX-0.\the\pdftexversion\pdftexrevision}
+	pdfpagemode		= FullScreen,
+	pdffitwindow	= true}
+
+\AtBeginDocument{\pdfpagewidth=176mm\pdfpageheight=250mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                 Paragraphs                %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parskip}{1ex plus0.2ex minus0.2ex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                 Footnotes                 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Vertical spacing between footnotes
+\setlength{\footnotesep}{2ex}
+
+% Rule height, width and space
+\renewcommand{\footnoterule}{\noindent\rule{5cm}{.1ex}\vspace{1.5ex}}
+
+% That's all folks!

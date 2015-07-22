@@ -1,0 +1,130 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Maxime Ulysse Garcia, max@ithake.eu, 2013 %%%
+%%%                                           %%%
+%%%    Questions and suggestions WELCOMED!    %%%
+%%%                                           %%%
+%%% This thesis template largely derives from %%%
+%%%      Charles Chapple, Robert Castelo      %%%
+%%%    Sergio Mendoza and Sergi Castellano    %%%
+%%%       Under GNU/GPL copyleft license      %%%
+%%%                                           %%%
+%%%   FEEL FREE TO USE IT AND IMPROVE IT!!!   %%%
+%%%                                           %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{preamble} % Call layout and other LaTeX parameters
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%   Body: text with some control commands   %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%       The whole writing starts here       %%%
+%%%         divided into frontmatter,         %%%
+%%%         mainmatter and backmatter         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Each \input command searches for a .tex file in a directory
+
+% Build the minitoc
+\dominitoc
+\nomtcrule
+
+% Set how many levels of subsections are listed in the Table Of Contents (TOC)
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+% The main body lies within the \begin{document} and \end{document} commands.
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                frontmatter                %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+	\addcontentsline{toc}{chapter}{Thèse}
+	\input{tex/00a-title}
+	\clearemptypage
+
+	\input{tex/00b-logos}				% Institutional logos
+	\clearemptypage
+
+	\input{tex/00c-dedicatory}			% Dedicatory
+	\input{tex/00d-acknowledgements}	% Acknowledgements
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             TOC, TOT, and TOF             %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% For a more compact layout 
+	\setlength{\parskip}{0.4ex plus0.2ex minus0.2ex}
+
+	% Main TOC
+	\tableofcontents
+	\mtcaddchapter	% prevent shifting
+
+	% TOT
+	\listoftables
+	\mtcaddchapter	% prevent shifting
+
+	% TOF
+	\listoffigures
+	\mtcaddchapter	% prevent shifting
+	\mtcaddchapter	% prevent shifting
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                 mainmatter                %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+	\clearemptydoublepage
+
+	\input{tex/01-introduction}			% State of the art
+	\clearemptydoublepage
+
+	\input{tex/02-methods}				% Material & Methods + Supplementary Information
+	\clearemptydoublepage
+
+	\input{tex/03-results}				% Got papers? great!
+	\clearemptydoublepage
+
+	\input{tex/04-results}				% Got more papers? wonderful!
+	\clearemptydoublepage
+
+	\input{tex/05-discussion}			% Make sense of the whole of it
+	\clearemptydoublepage
+
+	\input{tex/06-conclusions}			% Your contribution in short points
+	\clearemptydoublepage
+
+	\begin{appendices}					% Appendices
+		\input{tex/07-appendices}		% Explaining what is in your appendices
+		\input{tex/07a-publications}	% All your publications
+	\end{appendices}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                 backmatter                %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\backmatter
+	\singlespacing
+	\bibliography{bibliography/biblio}	% Your bibliography
+	\bibliographystyle{unsrtnat}		% The bibliography style
+	\clearemptydoublepage
+
+	\input{tex/08-colophon}				% Small colophon to explain how it was made
+	\clearemptydoublepage
+
+	\phantomsection
+	\addcontentsline{toc}{chapter}{Abstract}	
+	\input{tex/09-abstract}				% Abstracts of your thesis
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       It's finally over, you made it !!!      %
+%           Look for a postdoc now!!!           %
+%                  Or a life...                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
