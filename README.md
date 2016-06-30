@@ -14,13 +14,16 @@ stuff is worth it, you can buy me not a beer in return.  Maxime
 It was under GNU/GPL copyleft license.  But I changed it for a NOT-A-BEER-WARE LICENSE.  So you can still FEEL FREE TO USE, IMPROVE IT, AND BUY ME A DRINK !!
 
 ## How to include SVG pictures in your document:
-Make your SVG, and then, use  
-<code>make</code> to convert your SVG to PDF and PNG  
+Prepare your SVG, and then, use <code>make</code> to convert your SVG to PDF and PNG
 And in your file:
-- Include SVG version of Figure
-<code>\def\svgwidth{\columnwidth}\input{figures/figure.pdf_tex}</code>
-- Include PNG version of Figure
-<code>\includegraphics[width=\columnwidth]{figures/figure.png}</code>
+- Include SVG version of figure:
+```
+\def\svgwidth{\columnwidth}\input{figures/figure.pdf_tex}
+```
+- Include PNG version of figure:
+```
+\includegraphics[width=\columnwidth]{figures/figure.png}
+```
 
 ## Usage
 Type the following command :  
