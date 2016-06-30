@@ -3,14 +3,12 @@ I got this thesis template from Charles Chapple, who probably save my thesis whi
 This thesis template has been adapted from that of Sergi Castellano and Domenec Farre, with bits and pieces of Enrique Blanco's thrown in.  All of these were derived from the original templates written by Robert Castelo and Sergio Mendoza.  At some point during this process, Josep Abril got involved and, according to one of the previous people, who knew him, probably rewrote the whole thing. And I also did the same ;-)
 
 ### License
-```
--------------------------------------------------------------------------------
+---
 "THE NOT-A-BEER-WARE LICENSE" (Revision 42):
-<max@ithake.eu> wrote this file.  As long as you retain this notice you can do
+@MaxUlysse wrote this file.  As long as you retain this notice you can do
 whatever you want with this stuff.  If we meet some day, and you think this
 stuff is worth it, you can buy me not a beer in return.  Maxime
--------------------------------------------------------------------------------
-```
+---
 It was under GNU/GPL copyleft license.  But I changed it for a NOT-A-BEER-WARE LICENSE.  So you can still FEEL FREE TO USE, IMPROVE IT, AND BUY ME A DRINK !!
 
 ## How to include SVG pictures in your document:
