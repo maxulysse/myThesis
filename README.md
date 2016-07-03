@@ -1,6 +1,4 @@
-# myThesis template
-## VERSION
-1.0
+# myThesis template 1.0
 
 ## INSTALLATION
 * Download the source with a <code>git clone git@github.com:MaxUlysse/myThesis.git</code>
@@ -44,7 +42,7 @@
 
 ## LICENSE
 ---
-"THE NOT-A-BEER-WARE LICENSE" (Revision 42): @MaxUlysse wrote this file.  As long as you retain this notice you can do whatever you want with this stuff.  If we meet some day, and you think this stuff is worth it, you can buy me not a beer in return.
+"THE NOT-A-BEER-WARE LICENSE" (Revision 42): [@MaxUlysse](https://github.com/MaxUlysse) wrote this file.  As long as you retain this notice you can do whatever you want with this stuff.  If we meet some day, and you think this stuff is worth it, you can buy me not a beer in return.
 
 ---
 It was under GNU/GPL copyleft license.  But since I changed it for a NOT-A-BEER-WARE LICENSE.  So you can still FEEL FREE TO USE AND IMPROVE IT, and also you can BUY ME A DRINK !!
