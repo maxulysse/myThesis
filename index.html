@@ -37,27 +37,59 @@
         </div>
         <article class="markdown-body">
           <h1>
-<a id="mythesis-template" class="anchor" href="#mythesis-template" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>myThesis template</h1>
-
-<p>I got this thesis template from Charles Chapple, who probably save my thesis whith it.  I'll probably never be able to thank him enough.
-This thesis template has been adapted from that of Sergi Castellano and Domenec Farre, with bits and pieces of Enrique Blanco's thrown in.  All of these were derived from the original templates written by Robert Castelo and Sergio Mendoza.  At some point during this process, Josep Abril got involved and, according to one of the previous people, who knew him, probably rewrote the whole thing. And I also did the same ;-)</p>
-
-<h3>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h3>
-
-<hr>
-
-<p>"THE NOT-A-BEER-WARE LICENSE" (Revision 42): <a href="https://github.com/MaxUlysse" class="user-mention">@MaxUlysse</a> wrote this file.  As long as you retain this notice you can do whatever you want with this stuff.  If we meet some day, and you think this stuff is worth it, you can buy me not a beer in return.</p>
-
-<hr>
-
-<p>It was under GNU/GPL copyleft license.  But since I changed it for a NOT-A-BEER-WARE LICENSE.  So you can still FEEL FREE TO USE AND IMPROVE IT, and also you can BUY ME A DRINK !!</p>
+<a id="mythesis-template-10" class="anchor" href="#mythesis-template-10" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>myThesis template 1.0</h1>
 
 <h2>
-<a id="how-to-include-svg-pictures-in-your-document" class="anchor" href="#how-to-include-svg-pictures-in-your-document" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to include SVG pictures in your document:</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INSTALLATION</h2>
 
-<p>Prepare your SVG, and then, use <code>make</code> to convert your SVG to PDF and PNG
-And in your file:</p>
+<ul>
+<li>Download the source with a <code>git clone <a href="mailto:git@github.com">git@github.com</a>:MaxUlysse/myThesis.git</code>
+</li>
+<li>Write your thesis</li>
+<li>Use <code>make</code> to build the pdf of your thesis</li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>USAGE</h2>
+
+<h3>
+<a id="files" class="anchor" href="#files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Files</h3>
+
+<ul>
+<li>
+<code>myThesis.tex</code> is the main file containing the calling to the other files.</li>
+<li>
+<code>myThesis.sty</code> contains most of the packages needed</li>
+<li>
+<code>preamble.tex</code> contains the rest of the packages and definitions for building the file</li>
+</ul>
+
+<h3>
+<a id="directories" class="anchor" href="#directories" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Directories</h3>
+
+<ul>
+<li>
+<code>bibliography</code> contains your bibliography in BibTex format</li>
+<li>
+<code>articles</code> contains the articles you want to include in your thesis</li>
+<li>
+<code>figures</code> contains the figures you wan to include in your thesis</li>
+<li>
+<code>tex</code> contains all the tex files for your thesis</li>
+</ul>
+
+<h3>
+<a id="scripts" class="anchor" href="#scripts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Scripts</h3>
+
+<ul>
+<li>
+<code>Makefile</code> build your thesis</li>
+<li>
+<code>updateBibliography.sh</code> update your bibliography from a Mendeley bibliography file</li>
+</ul>
+
+<h3>
+<a id="how-to-include-pictures-in-your-document" class="anchor" href="#how-to-include-pictures-in-your-document" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to include pictures in your document:</h3>
 
 <ul>
 <li>Include SVG version of figure:</li>
@@ -74,12 +106,40 @@ And in your file:</p>
 </code></pre>
 
 <h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CHANGELOG</h2>
 
-<p>Type the following command :<br>
-<code>make</code> to build a pdf of your thesis (without the logs)<br>
-<code>make log</code> if you want to keep the log when building your thesis<br>
-<code>make clean</code> to remove your pdf</p>
+<h3>
+<a id="version-β" class="anchor" href="#version-%CE%B2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Version β</h3>
+
+<ul>
+<li>add version number</li>
+<li>add changelog</li>
+<li>enhance readme.md</li>
+</ul>
+
+<h3>
+<a id="version-α" class="anchor" href="#version-%CE%B1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Version α</h3>
+
+<ul>
+<li>project creation</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LICENSE</h2>
+
+<hr>
+
+<p>"THE NOT-A-BEER-WARE LICENSE" (Revision 42): <a href="https://github.com/MaxUlysse">@MaxUlysse</a> wrote this file.  As long as you retain this notice you can do whatever you want with this stuff.  If we meet some day, and you think this stuff is worth it, you can buy me not a beer in return.</p>
+
+<hr>
+
+<p>It was under GNU/GPL copyleft license.  But since I changed it for a NOT-A-BEER-WARE LICENSE.  So you can still FEEL FREE TO USE AND IMPROVE IT, and also you can BUY ME A DRINK !!</p>
+
+<h2>
+<a id="notes" class="anchor" href="#notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>NOTES</h2>
+
+<p>I got this thesis template from Charles Chapple, who probably save my thesis whith it.  I'll probably never be able to thank him enough.
+This thesis template has been adapted from that of Sergi Castellano and Domenec Farre, with bits and pieces of Enrique Blanco's thrown in.  All of these were derived from the original templates written by Robert Castelo and Sergio Mendoza.  At some point during this process, Josep Abril got involved and, according to one of the previous people, who knew him, probably rewrote the whole thing. And I also did the same ;-)</p>
 
 <h2>
 <a id="myownthesis" class="anchor" href="#myownthesis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>myOwnThesis</h2>
