@@ -1,4 +1,4 @@
-# myThesis template 1.0
+# <img alt="myThesis Logo" src="http://i.imgur.com/BZvsDhk.png" height=50 /> template 1.0
 
 ## INSTALLATION
 * Download the source with a <code>git clone git@github.com:MaxUlysse/myThesis.git</code>

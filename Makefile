@@ -30,6 +30,8 @@ PDF_TEX = $(shell find -type f -iname "*.svg" | sed 's/.svg/.pdf_tex/g')
 SVG2PNG	= inkscape $< -e $@ -y 255 -d 180
 SVG2PDF	= inkscape -D -z --file=$< --export-pdf=$@ --export-latex
 
+.PHONY: all remove clean log rebuild
+
 all: remove ${PNGS} ${PDFS} ${THESIS}
 
 ${THESIS}:
