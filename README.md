@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/MaxUlysse/myThesis.png?label=ready&title=Ready)](https://waffle.io/MaxUlysse/myThesis)
 # <img alt="myThesis Logo" src="http://i.imgur.com/BZvsDhk.png" height=50 /> 1.0
 
 ## INSTALLATION
