@@ -42,10 +42,7 @@
 
 ## LICENSE
 ---
-"THE NOT-A-BEER-WARE LICENSE" (Revision 42): [@MaxUlysse](https://github.com/MaxUlysse) wrote this file.  As long as you retain this notice you can do whatever you want with this stuff.  If we meet some day, and you think this stuff is worth it, you can buy me not a beer in return.
-
----
-It was under GNU/GPL copyleft license.  But since I changed it for a NOT-A-BEER-WARE LICENSE.  So you can still FEEL FREE TO USE AND IMPROVE IT, and also you can BUY ME A DRINK !!
+It was under GNU/GPL copyleft license. Just change it with new version to MIT License. But if you like it and we meet some day, and you think this stuff is worth it, you can buy me not a beer
 
 ## NOTES
 I got this thesis template from Charles Chapple, who probably save my thesis whith it.  I'll probably never be able to thank him enough.
